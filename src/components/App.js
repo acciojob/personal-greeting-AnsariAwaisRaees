@@ -7,6 +7,7 @@ const App = () => {
   const [name, setName] = useState("");
   return (
     <div>
+        <label htmlFor="name">Enter your name:</label>
         <input type="text"  onKeyUp={(event)=>setMessage(`Hello ${event.target.value}!`)}/>
         <p>{message}</p>
     </div>
