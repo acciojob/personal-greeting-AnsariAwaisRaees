@@ -1,8 +1,6 @@
+import React, { useState } from 'react';
 
-import React, { useState } from "react";
-import './../styles/App.css';
-
-const App = () => {
+function App() {
   const [name, setName] = useState('');
   
   const handleChange = (event) => {
@@ -19,9 +17,9 @@ const App = () => {
         onChange={handleChange}
         placeholder="Your name"
       />
-      {name && <h2>Hello, {name}!</h2>}
+      {name && <p>Hello, {name}!</p>}
     </div>
   );
 }
 
-export default App
+export default App;
