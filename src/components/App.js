@@ -11,14 +11,9 @@ const App = () => {
 
   return (
     <div>
-      <label htmlFor="nameInput">Enter your name: </label>
-      <input
-        id="nameInput"
-        type="text"
-        value={name}
-        onChange={handleChange} 
-      />
-      {name && <h2>Hello, {name}!</h2>}
+        <label htmlFor="name">Enter your name:</label>
+        <input type="text" id="name" onChange={e => setName(e.target.value)}/>
+        <p>{name && name.length>0?"Hello"+name+"!":""}</p>
     </div>
   );
 }
